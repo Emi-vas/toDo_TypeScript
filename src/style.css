@@ -1,0 +1,15 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+    font-size: inherit;
+    padding: 7px 15px;
+    outline: none;
+    font-family: inherit;
+    border: none;
+    border-radius: 3px;
+}

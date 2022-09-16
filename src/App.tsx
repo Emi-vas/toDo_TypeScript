@@ -1,8 +1,15 @@
+import AddTodo from "./components/AddTodo";
 
 const App = () => {
   return (
     <div>
-      <h1>Todo TypeScript</h1>
+      <h1
+        style={{
+          color: "lightcoral",
+          marginLeft: '20px'
+        }}
+      >Todo TypeScript</h1>
+      <AddTodo />
     </div>
   );
 };
