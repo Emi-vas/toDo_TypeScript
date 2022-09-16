@@ -2,7 +2,12 @@ import { ChangeEvent, useEffect, useState } from "react";
 import { Task } from "../Interfaces";
 import { Button, Container, Input, InputsBloc, TaskAdded } from "./AddTodo.style";
 
-const AddTodo = () => {
+interface Props {
+    refreshList: boolean;
+    setRefreshList: (val: boolean) => void
+}
+
+const AddTodo = ({refreshList, setRefreshList}: Props) => {
 
     const [anim, setAnim] = useState(false)
     const [task, setTask] = useState<Task>({name: "", deadline: ""})
@@ -10,6 +15,7 @@ const AddTodo = () => {
 
     const handleSaveList = (): void => {
         let listTasksJson= localStorage.getItem('task')
+        setRefreshList(!refreshList)
 
         if(!listTasksJson) {
             const taskJson = JSON.stringify([task])

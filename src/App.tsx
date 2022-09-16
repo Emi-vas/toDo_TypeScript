@@ -1,7 +1,11 @@
+import { useState } from "react";
 import AddTodo from "./components/AddTodo";
 import ListTodo from "./components/ListTodo";
 
 const App = () => {
+
+  const [refreshList, setRefreshList] = useState(false)
+
   return (
     <div>
       <h1
@@ -10,8 +14,8 @@ const App = () => {
           marginLeft: '20px'
         }}
       >Todo TypeScript</h1>
-      <AddTodo />
-      <ListTodo />
+      <AddTodo refreshList={refreshList} setRefreshList={setRefreshList}/>
+      <ListTodo refreshList={refreshList}/>
     </div>
   );
 };
