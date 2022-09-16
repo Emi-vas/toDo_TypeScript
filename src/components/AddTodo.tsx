@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { Button, Container, Input, InputsBloc } from "./AddTodo.style";
 
 const AddTodo = () => {
+
+    const [anim, setAnim] = useState(false)
+
     return (
         <div>
             <Container>
@@ -13,7 +17,17 @@ const AddTodo = () => {
                         <Input placeholder='Name ' />
                         <Input placeholder='Deadline (ex 12:15)' />
                     </div>
-                   <Button> Add </Button>
+                   <Button 
+                        style={{
+                            animation: anim ? "clic 0.2s" : ''
+                        }}
+                        onClick={() => {
+                            setAnim(true)
+                            setTimeout(() => {
+                                setAnim(false)
+                            }, 300)
+                        }}
+                   > Add </Button>
                 </InputsBloc>
             </Container>
         </div>

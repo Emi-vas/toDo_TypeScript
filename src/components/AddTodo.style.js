@@ -34,4 +34,11 @@ export const Button = styled.button`
         color: lightcoral;
         font-weight: bold;
     }
+
+    @keyframes clic {
+        to {
+            background-color: lightcoral;
+            opacity: 0;
+        }
+    }
 `
