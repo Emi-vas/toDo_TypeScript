@@ -42,3 +42,14 @@ export const Button = styled.button`
         }
     }
 `
+
+export const TaskAdded = styled.div`
+    transform: translateX(-200px);
+    transform-origin: top;
+    animation: scaleOn both 0.3s;
+    @keyframes scaleOn {
+        to {
+            transform: translateX(0);
+        }
+    }
+`

@@ -1,4 +1,5 @@
 import AddTodo from "./components/AddTodo";
+import ListTodo from "./components/ListTodo";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
         }}
       >Todo TypeScript</h1>
       <AddTodo />
+      <ListTodo />
     </div>
   );
 };
